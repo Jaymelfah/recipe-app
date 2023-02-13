@@ -1,12 +1,10 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
   def initialize(user)
     return unless user.present?
 
-    can :manage, Recipe, user: user
+    can(:manage, Recipe, user:)
     # can :manage, Food, user: user
     # can :manage, RecipeFood, user: user
     return unless user.role == 'admin'
