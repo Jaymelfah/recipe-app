@@ -9,7 +9,7 @@
       <% if can? :read, recipe %>
         <h3><%= link_to "#{recipe.name}", recipe_path(recipe.id) %></h3>
         <% if can? :destroy, recipe %>
-        <%= link_to "Delete recipe", recipe_path(recipe.id), method: :delete %>
+        <%= button_to "Delete recipe", recipe_path(recipe.id), method: :delete %>
         <% end %>
         <p><%= recipe.description %></p>
       <% end %>
