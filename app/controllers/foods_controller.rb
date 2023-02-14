@@ -7,8 +7,7 @@ class FoodsController < ApplicationController
     @food = Foods.new
   end
 
-  def show
-  end
+  def show; end
 
   def create
     @food = Foods.new(params_foods)
@@ -16,10 +15,10 @@ class FoodsController < ApplicationController
 
     if @food.save
       redirect_to foods_path
-      flash[:notice] = "Food was Successfully Created"
+      flash[:notice] = 'Food was Successfully Created'
     else
       render :new
-      flash[:notice] = "Food has not been created"
+      flash[:notice] = 'Food has not been created'
     end
   end
 
