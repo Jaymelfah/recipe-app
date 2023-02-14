@@ -1,5 +1,10 @@
 <%= form_with model: @recipe do |form| %>
   <div>
+    <%= form.label :food %>
+    <%= form.select :food_id, Foods.all.collect {|item| [item.name, item.id] },
+      { include_blank: true } %>
+  </div>
+  <div>
     <%= form.label :quantity %>
     <%= form.number_field :quantity %>
   </div>
