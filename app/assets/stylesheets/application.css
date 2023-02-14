@@ -161,3 +161,28 @@ body {
   color: #3a3131;
   font-size: 2rem;
 }
+
+table {
+  width: 90%;
+  margin-top: 2rem;
+  margin-inline: auto;
+}
+
+table,
+th,
+td {
+  border: 1px solid #3a3131;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #a30000b1;
+  color: #fff;
+}
+
+thead {
+  background-color: #3a3131;
+  color: #ffffffea;
+}

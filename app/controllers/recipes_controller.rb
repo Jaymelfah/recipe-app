@@ -1,4 +1,6 @@
 class RecipesController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @recipes = Recipe.all.includes([:user])
   end
@@ -13,7 +15,7 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.new(params_recipe)
+    @recipe = Recipe.new(recipe_params)
     @recipe.user_id = current_user.id
 
     if @recipe.save
@@ -34,7 +36,7 @@ class RecipesController < ApplicationController
 
   private
 
-  def params_recipe
+  def recipe_params
     params.require(:recipe).permit(:name, :preparation_time, :description, :public, :cooking_time)
   end
 end
