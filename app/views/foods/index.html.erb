@@ -15,8 +15,8 @@
         <tr>
             <td><%= food.name %></td>
             <td><%= food.measurement_unit %></td>
-            <td><%= food.price %></td>
-            <td><%= link_to 'Destroy', food, method: :delete, data: { turbo: false } %></td>
+            <td>$<%= food.price %></td>
+            <td><%= button_to 'Destroy', food_path(food), method: :delete, data: { turbo: false } %></td>
         </tr>
         <% end %>
     </tbody>
