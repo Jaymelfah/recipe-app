@@ -5,6 +5,9 @@ Rails.application.routes.draw do
     authenticated :user do
       root 'recipes#index', as: :authenticated_root
     end
+    unauthenticated do
+      root 'public_recipes#index', as: :unauthenticated_root
+    end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
