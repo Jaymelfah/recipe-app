@@ -6,7 +6,7 @@ class Ability
 
     can(:manage, Recipe, user:)
     # can :manage, Food, user: user
-    can :manage, RecipeFood, user: user
+    can(:manage, RecipeFood, user:)
     return unless user.role == 'admin'
 
     can :manage, all
