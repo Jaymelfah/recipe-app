@@ -1,4 +1,4 @@
-# rubocop:disable Layout/EndOfLine
+# rubocop : disable all
 require 'rails_helper'
 
 # Specs in this file have access to a helper object that includes
@@ -14,4 +14,5 @@ require 'rails_helper'
 RSpec.describe FoodsHelper, type: :helper do
   pending "add some examples to (or delete) #{__FILE__}"
 end
-# rubocop:enable Layout/EndOfLine
+
+# rubocop : enable all

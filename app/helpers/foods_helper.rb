@@ -1,4 +1,4 @@
-# rubocop:disable Layout/EndOfLine
+# rubocop: disable all
 module FoodsHelper
 end
-# rubocop:enable Layout/EndOfLine
+# rubocop : enable all
