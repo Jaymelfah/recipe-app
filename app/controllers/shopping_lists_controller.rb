@@ -5,11 +5,6 @@ class ShoppingListsController < ApplicationController
     @total = sum(@recipe_foods)
   end
 
-  def create
-    @recipe = Recipe.find(params[:recipe_id])
-    @recipe_foods = @recipe.recipe_foods.includes([:food])
-  end
-
   def sum(recipe_foods)
     total = 0
     recipe_foods.each do |item|
