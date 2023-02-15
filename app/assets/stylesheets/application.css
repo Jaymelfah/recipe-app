@@ -44,9 +44,10 @@ body {
 
 .registration {
   gap: 1rem;
-  margin-left: 70%;
+  margin-left: 5%;
   margin-top: 2rem;
   align-items: center;
+  width: 20%;
 }
 
 .titles {
@@ -185,4 +186,22 @@ tbody tr:nth-child(even) {
 thead {
   background-color: #3a3131;
   color: #ffffffea;
+}
+
+.nav {
+  width: 100%;
+  align-items: center;
+  background-color: #3a3131;
+}
+
+.ul {
+  list-style: none;
+  width: 30rem;
+  gap: 1rem;
+  margin-left: 40%;
+}
+
+.image {
+  width: 5rem;
+  margin-left: 5%;
 }
