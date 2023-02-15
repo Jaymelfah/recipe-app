@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before :each do
-    @user = User.new(name: 'Mark', email: 'mark@gmail.com', password: 'password123')
+    @user = User.new(name: 'Chris', email: 'chris@gmail.com', password: 'password123')
   end
 
   it 'checks if user is created successfully' do

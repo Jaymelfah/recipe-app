@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Food, type: :model do
   before :each do
-    @user = User.new(name: 'Mark', email: 'mark@gmail.com', password: 'password123')
-    @food = Food.create(name: 'chicken', user: @user, price: 5, measurement_unit: 'kg', quantity: 4)
+    @user = User.new(name: 'Wise', email: 'wise@gmail.com', password: 'password123')
+    @food = Food.create(name: 'chicken', user: @user, price: 5, measurement_unit: 'kg', quantity: 4, user_id: @user.id)
   end
 
   it 'checks if food is successfully created' do
