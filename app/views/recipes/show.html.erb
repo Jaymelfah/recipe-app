@@ -14,7 +14,7 @@
   <div class="recipe-btns flex">
   <% if can? :manage, @recipe %>
     <button class="btn">
-      <%= link_to 'Generate Shopping List', new_recipe_recipe_food_path(@recipe.id), class: "links" %>
+      <%= link_to 'Generate Shopping List', recipe_shopping_lists_path(@recipe), class: "links" %>
     </button>
     <button class="btn">
       <%= link_to 'Add Ingredient', new_recipe_recipe_food_path(@recipe.id), class: "links" %>
