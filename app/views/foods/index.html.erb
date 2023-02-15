@@ -1,4 +1,6 @@
-<button><%= link_to 'New Food', new_food_path, class: 'link'%></button>
+<% if user_signed_in? %>
+<button class="btn"><%= link_to 'New Food', new_food_path, class: "links" %></button>
+<% end %>
 <table>
     <thead>
         <tr>
@@ -16,7 +18,11 @@
             <td><%= food.name %></td>
             <td><%= food.measurement_unit %></td>
             <td>$<%= food.price %></td>
-            <td><%= button_to 'Destroy', food_path(food), method: :delete, data: { turbo: false } %></td>
+            <td>
+              <% if can? :manage, food %>
+              <%= button_to 'Destroy', food_path(food), method: :delete, data: { turbo: false } %>
+              <% end %>
+            </td>
         </tr>
         <% end %>
     </tbody>
