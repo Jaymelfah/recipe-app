@@ -1,16 +1,20 @@
 class FoodsController < ApplicationController
   def index
-    @foods = Foods.all.includes([:user])
+    @foods = if user_signed_in?
+               current_user.foods.includes(:user)
+             else
+               Food.all.includes([:user])
+             end
   end
 
   def new
-    @food = Foods.new
+    @food = Food.new
   end
 
   def show; end
 
   def create
-    @food = Foods.new(params_foods)
+    @food = Food.new(food_params)
     @food.user_id = current_user.id
 
     if @food.save
@@ -23,14 +27,14 @@ class FoodsController < ApplicationController
   end
 
   def destroy
-    @food = Foods.find(params[:id])
+    @food = Food.find(params[:id])
     @food.destroy
     redirect_to foods_path
   end
 
   private
 
-  def params_foods
-    params.require(:foods).permit(:name, :measurement_unit, :price, :quantity)
+  def food_params
+    params.require(:food).permit(:name, :measurement_unit, :price, :quantity)
   end
 end

@@ -1,5 +1,5 @@
-class Foods < ApplicationRecord
-  has_many :recipe_foods
+class Food < ApplicationRecord
+  has_many :recipe_foods, dependent: :destroy
   belongs_to :user
 
   validates :name, presence: true
