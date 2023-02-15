@@ -40,6 +40,8 @@ body {
   margin-top: 4rem;
   width: 60%;
   position: relative;
+  flex-direction: column;
+  align-items: center;
 }
 
 .registration {
@@ -119,12 +121,13 @@ body {
 .recipes {
   background-color: #3a3131;
   border-radius: 8px;
-  width: 40%;
+  width: 80%;
   color: #ffffffea;
   padding: 1rem;
   margin-bottom: 1rem;
+  font-size: 20px;
   align-items: center;
-  gap: 1rem;
+  gap: 5rem;
 }
 
 .recipe-btns {
@@ -204,4 +207,17 @@ thead {
 .image {
   width: 5rem;
   margin-left: 5%;
+}
+
+.add-food {
+  margin-left: 85%;
+  margin-top: 2rem;
+}
+
+.shopping {
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  width: 100%;
 }
