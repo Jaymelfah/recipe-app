@@ -1,6 +1,10 @@
 class FoodsController < ApplicationController
   def index
-    @foods = Food.all.includes([:user])
+    @foods = if user_signed_in?
+               current_user.foods.includes(:user)
+             else
+               Food.all.includes([:user])
+             end
   end
 
   def new

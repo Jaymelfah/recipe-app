@@ -20,7 +20,7 @@
             <td>$<%= food.price %></td>
             <td>
               <% if can? :manage, food %>
-              <%= button_to 'Destroy', food_path(food), method: :delete, data: { turbo: false } %>
+              <%= button_to 'Delete', food_path(food), method: :delete, data: { turbo: false }, class: "delete row-delete" %>
               <% end %>
             </td>
         </tr>

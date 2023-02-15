@@ -2,7 +2,7 @@
 <%= form_with model: [@recipe, @recipe.recipe_foods.create] do |form| %>
   <div>
     <%= form.label :food %>
-    <%= form.select :food_id, Food.all.collect {|item| [item.name, item.id] },
+    <%= form.select :food_id, @foods.map { |food| [food.name, food.id] },
       { include_blank: true }, class: "form-field" %>
   </div>
   <div>
