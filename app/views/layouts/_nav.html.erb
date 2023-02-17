@@ -1,7 +1,5 @@
 <nav class="nav flex">
-   <div class="image">
-     <%= image_tag "kitchen-logo.jpeg", size: "60x60", alt: "user photo" %>
-   </div>
+  
    <ul class="ul flex">
      <li><%= link_to "Home", "#{user_signed_in? ? recipes_path : public_recipes_path}", class: "links" %></li>
      <li><%= link_to "Foods", foods_path, class: "links"%></li>
