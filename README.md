@@ -48,6 +48,9 @@
 ### ERD Diagram <a name="diagram">
 ![Preview](./app/assets/images/recipe-app.png)
 
+### Demo
+You can visit our page [here](https://rails-recipe-app-asbu.onrender.com)
+
 <!-- Features -->
 
 ### Key Features <a id="key-features"></a>
